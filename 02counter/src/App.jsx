@@ -8,12 +8,21 @@ function App() {
   //let counter = 15;
   const addValue = () => {
     console.log("Clicked", counter);
+
     // counter = counter + 1;
-    setCounter(counter + 1);
+    if (counter == 20) {
+      return 0;
+    } else {
+      setCounter(counter + 1);
+    }
   };
 
   const decValue = () => {
-    setCounter(counter - 1);
+    if (counter == 0) {
+      return 0;
+    } else {
+      setCounter(counter - 1);
+    }
   };
 
   return (
