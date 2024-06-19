@@ -1,12 +1,11 @@
 import React from "react";
 
-function button({ colors, oClick }) {
+function Button({ colors, onClick }) {
   return (
     <>
       <button
-        onClick={() => oClick(colors)}
-        className="outline-none px-4 rounded-lg "
-        
+        onClick={() => onClick(colors)}
+        className="outline-none px-4 rounded-lg"
         style={{ backgroundColor: colors }}
       >
         {colors}
@@ -15,4 +14,4 @@ function button({ colors, oClick }) {
   );
 }
 
-export default button;
+export default Button;

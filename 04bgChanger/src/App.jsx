@@ -4,19 +4,8 @@ import Button from "../../03taileindProps/src/comp/button";
 function App() {
   const [color, setColor] = useState("olive");
   const colors = [
-    "red",
-    "green",
-    "blue",
-    "olive",
-    "gray",
-    "yellow",
-    "pink",
-    "purple",
-    "lavender",
-    "white",
-    "black",
+    "red", "green", "blue", "olive", "gray", "yellow", "pink", "purple", "lavender", "white", "black"
   ];
-  
 
   return (
     <>
