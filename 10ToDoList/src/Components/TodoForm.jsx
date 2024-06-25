@@ -6,7 +6,8 @@ function TodoForm() {
   const { addTodo } = useTodo();
 
   const add = (e) => {
-    e.preventDefalut();
+    e.preventDefault();
+    
     if (!todo) {
       return;
     }
@@ -28,6 +29,7 @@ function TodoForm() {
         className="rounded-r-lg px-3 py-1 bg-green-600 text-white shrink-0"
       >
         Add
+        
       </button>
     </form>
   );
