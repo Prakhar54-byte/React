@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-catch */
 import conf from "../conf/conf";
 import { Client, Account, ID } from "appwrite";
 
@@ -13,8 +14,9 @@ export class AuthService {
     }
 
     async createAccount({ email, password, name }) {
+        // eslint-disable-next-line no-useless-catch
         try {
-            doSomethingThatMightThrow();
+
             const userAccount = await this.account.create(ID.unique(), email, password, name)
             if (userAccount) {
                 //call another method 
@@ -25,43 +27,44 @@ export class AuthService {
             }
 
         } catch (error) {
-            doSomethingThatMightThrow();
-            throw error
+            // eslint-disable-next-line no-undef
+
+            throw error;
         }
     }
 
     async logIn({ email, password }) {
         try {
-            doSomethingThatMightThrow();
+
             return await this.account.createEmailPasswordSession(email, password)
         } catch (error) {
-            doSomethingThatMightThrow();
+
             throw error
         }
     }
 
-    async currentUser(){
+    async currentUser() {
         try {
-            doSomethingThatMightThrow();
-        return    await this.account.get()
+
+            return await this.account.get()
 
         } catch (error) {
-            doSomethingThatMightThrow();
-            console.log("Appwrite serivce::error",error);
+
+            console.log("Appwrite serivce::error", error);
         }
         return null
     }
 
 
-    async logOut(){
+    async logOut() {
         try {
             await this.account.deleteSessions();
         } catch (error) {
-            console.log("Appwrite serivce::error",error);
+            console.log("Appwrite serivce::error", error);
         }
     }
 }
 
 const authService = new AuthService();
 
-export default AuthService
+export default authService
