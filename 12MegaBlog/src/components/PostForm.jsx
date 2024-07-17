@@ -17,6 +17,7 @@ function PostForm({post}) {
         }
     })
     const userData = useSelector(state=>state.user.userData)
+    
 
     const submit = async(data)=>{
         if (post) {
@@ -28,10 +29,11 @@ function PostForm({post}) {
         const dbPost=await service.updatePost(post.$id,{
             ...data,
             featuresImage:file ? file.$id : undefined,
-            if (dbPost) {
-                navigate(`/post/${dbPost.$id}`)
-            }
+            
         })
+        if (dbPost) {
+            navigate(`/post/${dbPost.$id}`)
+        }
         }else{
             const file = data.image[0] ? <h1>File does not exit</h1> :service.uploadFile(data.image[0]);
 
