@@ -8,6 +8,10 @@ import RTE from "./RTE";
 import SignUp from './SignUp'
 import Button from './Button'
 import Input from './Input'
+import PostForm from './PostForm'
+import PostCard from "./PostCard";
+import AuthLayout from './header/AuthLayout'
+import LogIn from './LogIn'
 
 export {
     Input,
@@ -19,5 +23,9 @@ export {
     Footer,
     Contanier,
     Logo,
-    LogOutBtn
+    LogOutBtn,
+    LogIn,
+    PostForm,
+    PostCard,
+    AuthLayout
 }
