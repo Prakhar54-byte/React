@@ -5,6 +5,7 @@ import authService from './appwrite/auth'
 import {logIn,logOut}  from './store/authSlice'
 import { Footer, Header } from './components'
 function App() {
+  console.log(import.meta.env.VITE_APPWRITE_URL);
   const [loading,setLoading]=useState(true)
   const dispatch = useDispatch()
   useEffect(()=>{

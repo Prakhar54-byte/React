@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-catch */
 import conf from "../conf/conf";
-import { Client, Account, ID } from "appwrite";
+import { Client,Account,ID } from "appwrite";
 
 export class AuthService {
     client = new Client();
@@ -50,7 +50,7 @@ export class AuthService {
 
         } catch (error) {
 
-            console.log("Appwrite serivce::error", error);
+            console.log("Appwrite serive :: getCurrentUser :: error", error)
         }
         return null
     }
@@ -60,7 +60,7 @@ export class AuthService {
         try {
             await this.account.deleteSessions();
         } catch (error) {
-            console.log("Appwrite serivce::error", error);
+            console.log("Appwrite serive :: getCurrentUser :: error", error)
         }
     }
 }
